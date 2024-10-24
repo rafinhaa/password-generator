@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap");
+
+:root {
+  --color-primary-1: #34b297;
+  --color-secondary: #15a085;
+
+  --color-neutral-1: #f8fafc;
+  --color-neutral-2: #24232b;
+  --color-neutral-3: #13121a;
+
+  --error-color: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+body {
+  font-family: "Oxanium", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background-color: var(--color-neutral-3);
+}
+
+body img {
+  width: 100px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+#title {
+  color: var(--color-neutral-1);
+  font-weight: 700;
+}
+
+#password_container {
+  width: 100%;
+  max-width: 400px;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-neutral-2);
+
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#password_container.show {
+  display: flex;
+  max-height: 100px;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#password {
+  font-size: 0.875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--color-neutral-1);
+}
+
+#copy {
+  background-color: transparent;
+  color: var(--color-primary-1);
+  height: 1rem;
+  width: 1rem;
+  font-size: 1rem;
+
+  transition: color 0.5s;
+}
+
+#copy:hover {
+  color: var(--color-secondary);
+}
+
+#password_items {
+  width: 400px;
+  background-color: var(--color-neutral-2);
+  color: var(--color-neutral-1);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+#size {
+  width: 70px;
+  text-align: center;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 0.2rem;
+}
+
+#size::-webkit-inner-spin-button,
+#size::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+#size:focus {
+  outline: 1px solid var(--color-primary-1);
+}
+
+#generate {
+  background-color: var(--color-primary-1);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-neutral-1);
+  transition: background-color 0.5s;
+}
+
+#generate:hover {
+  background-color: var(--color-secondary);
+}
+
+@media screen and (max-width: 400px) {
+  body img {
+    width: 80px;
+  }
+
+  #container {
+    width: 90%;
+  }
+
+  #password_items {
+    width: 100%;
+  }
+
+  #title {
+    font-size: 1.5rem;
+  }
+
+  #password_items {
+    font-size: 0.9rem;
+  }
+
+  .item label {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="./src/assets/lock.svg" />
+
+    <title>Gerador de senhas</title>
+  </head>
+  <body>
+    <div id="container">
+      <img src="./src/assets/lock.svg" alt="Cadeado" />
+      <h1 id="title">Gerar senha</h1>
+
+      <div id="password_container">
+        <span id="password"></span>
+
+        <button id="copy">
+          <i class="ph-copy"></i>
+        </button>
+      </div>
+
+      <div id="password_items">
+        <div class="item">
+          <input type="number" id="size" name="size" value="16" />
+          <label for="size"> Quantidade de caracteres </label>
+        </div>
+
+        <div class="item">
+          <input
+            type="checkbox"
+            name="include_uppercase"
+            id="include_uppercase"
+          />
+          <label for="include_uppercase"> Incluir letras maiúsculas </label>
+        </div>
+
+        <div class="item">
+          <input
+            type="checkbox"
+            name="include_lowercase"
+            id="include_lowercase"
+          />
+          <label for="include_lowercase"> Incluir letras minúsculas </label>
+        </div>
+
+        <div class="item">
+          <input type="checkbox" name="include_number" id="include_number" />
+          <label for="include_number"> Incluir números </label>
+        </div>
+
+        <div class="item">
+          <input
+            type="checkbox"
+            name="include_special_character"
+            id="include_special_character"
+          />
+          <label for="include_special_character">
+            Incluir caracteres especiais
+          </label>
+        </div>
+
+        <button id="generate">Gerar senha</button>
+      </div>
+    </div>
+
+    <script src="./src/js/script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>
